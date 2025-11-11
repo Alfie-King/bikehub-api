@@ -2,8 +2,8 @@ name: Bike Point Ingestion
 
 on:
   # every 5 minutes
-  schedule:
-    - cron: '*/5 * * * *'
+  # schedule:
+  #   - cron: '*/5 * * * *'
   # button to trigger workflow manually
   workflow_dispatch:
 
