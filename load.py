@@ -22,11 +22,11 @@ def load():
     # checking for any high level errors
     try:
         # checking access to the s3
-        try:
-            s3_client.list_objects_v2(Bucket=bucket)
-        except:
-            print('Access denied')
-            sys.exit(1)
+        # try:
+        #     s3_client.list_objects_v2(Bucket=bucket)
+        # except:
+        #     print('Access denied')
+        #     sys.exit(1)
         
         # looping for each file in the data folder
         dir = 'data'
