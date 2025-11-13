@@ -9,6 +9,7 @@ def extract(url):
     
     response = r.get(url,timeout=10)
     retry_codes = [429,500,502,503,504] # All codes that we are wanting to retry
+    print(f'attempting {url}')
 
     count = 0
     max_tries = 3
@@ -16,6 +17,7 @@ def extract(url):
     while count < max_tries:
         # Tests if connection to API is successful
         if response.status_code == 200:
+            print('successful call')
             # Tests if the API data type is JSON if yes runs code if no breaks and prints error message
             try:
                 data = response.json()
